@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <h3 class="title">Vente PIZZA</h3>
+        <form action="test.html" class="formulaire">
+            Saisir vote nom: <input type="text" class="txt" id="nom"><br/>
+            Saisir l'adresse: <input type="text" class="txt" id="address">
+        
+            <h3 class="label">Produits à acheter</h3>
+            <table class="tabProd" border="2px">
+                <th>Nom du produit</th>
+                <th>Prix unitaire en DH</th>
+                <th>Quantité</th>
+                <tr>
+                    <td>Pizza 4 fromages</td>
+                    <td>80</td>
+                    <td><input type="number" id="prix1"  min="0" onchange="calcTot(); return false;"></td>
+                </tr>
+                <tr>
+                    <td>Pizza Herbo</td>
+                    <td>75</td>
+                    <td><input type="number" id="prix2" value="0" min="0" onchange="calcTot(); return false;"></td>
+                </tr>
+                <tr>
+                    <td>Pizza viande hachée</td>
+                    <td>100</td>
+                    <td><input type="number" id="prix3" value="0" min="0" onchange="calcTot(); return false;"></td>
+                </tr>
+                <tr>
+                    <td>Pizza fruits de mer</td>
+                    <td>120</td>
+                    <td><input type="number" id="prix4" value="0" min="0" onchange="calcTot(); return false;"></td>
+                </tr>
+            </table>
+            <h3 class="label">Paiement par:</h3><br/>
+            <input type="radio" name="paiement" id="cb" onclick="numCB.disabled=false, numCB.focus()">Carte bancaire
+            <input type="radio" name="paiement" id="ch" onclick="numCB.disabled=true, numCB.value=''" checked>Chèque
+            <br/>
+            Numéro de la carte bancaire:
+            <input type="text" class="txt" id="numCB" disabled><br/>
+            <input type="submit" value="Envoyer" onclick="verify()"><br><br>
+            Merci de votre visite, le montant total de votre commande est :
+            <input type="text" class="txt" id="tot" disabled>
+        </form>
+    </body>
+</html>
+
+
+<script>
+    function verify(){
+        if(document.getElementById("nom").value=""){
+            window.alert("Vous devez saisir votre nom.");
+            document.getElementById("nom").focus();
+        }
+        if(document.getElementById("address").value=""){
+            window.alert("Vous devez saisir votre adresse.");
+            document.getElementById("address").focus();
+        }
+
+        if(s==0){
+            window.alert("Veuillez choisir au moins une pizza.");
+            document.getElementById("prix1").focus();
+        }
+
+        if(document.getElementById("cb").checked){
+            if(document.getElementById("numCB").value=""){
+                window.alert("Veuillez saisir le numéro de votre carte bancaire.");
+                document.getElementById("numCB").focus();
+            }
+        }
+    }
+
+   function calcTot(){
+        var s=0;
+        var q1 = document.getElementById("prix1").value;
+        var q2 = document.getElementById("prix2").value;
+        var q3 = document.getElementById("prix3").value;
+        var q4 = document.getElementById("prix4").value;
+        if(q1!="" && parseInt(q1)>=0){
+            s+= parseInt(q1) * 80;
+        }
+        if(q2!="" && parseInt(q2)>=0){
+            s+= parseInt(q2) * 75;
+        }
+        if(q3!="" && parseInt(q3)>=0){
+            s+= parseInt(q3) * 100;
+        }
+        if(q4!="" && parseInt(q4)>=0){
+            s+= parseInt(q4) * 120;
+        }
+        document.getElementById("tot").value = s;
+    }
+        
+</script>

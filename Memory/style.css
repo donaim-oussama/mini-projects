@@ -1,0 +1,25 @@
+body{
+	background-color: black;
+}
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	width: 900px;
+	justify-content: center;
+	border-width: 1px;
+	border-style: solid;
+	border-color: gold;
+	margin: 30px auto;
+	padding: 0 30px;
+	border-radius: 15px;
+}
+h4, span{
+	color: gold;
+}
+.grid{
+	display: flex;
+	flex-wrap: wrap;
+	height: 800px;
+	width: 800px;
+}

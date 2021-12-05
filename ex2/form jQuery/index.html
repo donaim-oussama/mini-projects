@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="form.js"></script>
+    <title>Page de test</title>
+</head>
+<body>
+    <fieldset id="main">
+        <p class="first"><span class="firstLet">L</span>orem ipsum dolor sit amet consectetur adipisicing elit. Repellendus mollitia exercitationem nam odio? Neque, accusantium incidunt doloribus suscipit sapiente sunt?</p>
+        <img src="../img (4).jpg" id="img">
+        <p><span class="firstLet">L</span>orem ipsum dolor, sit amet consectetur adipisicing elit. Sit ipsa excepturi doloremque tempora? Corporis odit nam sapiente reprehenderit quod amet delectus, temporibus cupiditate? Dolorum culpa velit aperiam facilis. Libero, rem eius, repudiandae culpa necessitatibus tempore qui minus provident voluptas deleniti corrupti blanditiis quam sequi impedit.</p>
+        <p><span class="firstLet">P</span>laceat deleniti fugit quaerat perspiciatis facilis est nemo quo possimus eveniet, numquam excepturi incidunt minus reprehenderit. Alias sapiente, id vero vel illum minus vitae et.</p>
+    </fieldset>
+    <fieldset>
+        <table>
+            <tr>
+                <td>Couleur de fond
+                <td>
+                    <select id="backG">
+                        <option value="white" selected>Blanc</option>
+                        <option value="green">Vert</option>
+                        <option value="red">Rouge</option>
+                        <option value="blue">Bleu</option>
+                    </select>
+            </tr>
+            <tr>
+                <td>Texte</td>
+                <td>
+                    <select id="txt" >
+                        <option value="normal">Normal</option>
+                        <option value="underln">Souligné</option>
+                        <option value="it">Italique</option>
+                        <option value="bold">Gras</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Police</td>
+                <td>
+                    <select name="" id="font" >
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Tahoma">Tahoma</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Police 1ère phrase</td>
+                <td>
+                    <select name="" id="fontFirst">
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Tahoma">Tahoma</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Premier caractère des phrases</td>
+                <td>
+                    <select name="" id="firstChar">
+                        <option value="normal">Normal</option>
+                        <option value="bold">Gras</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Mot en rouge</td>
+                <td>
+                    <input type="number" name="" id="redWord" min="1">
+                    <button id="red">Ok</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Bordure image</td>
+                <td>
+                    <select name="" id="imgBorder">
+                        <option value="none">Aucune bordure</option>
+                        <option value="solid">Bordure simple</option>
+                        <option value="double">Bordure double</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><button id="btn">RAZ formulaire</button>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>
